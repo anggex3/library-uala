@@ -1,0 +1,46 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-sm-12" >
+        <h3>Bienvenido a la biblioteca Ualá </h3>
+      </div>
+    </div>
+    <div class="row">
+      
+    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="value" uib-btn-radio="'popularity'" ng-change='newValue(value)'>Mayor popularidad</label>
+        <label class="btn btn-primary" ng-model="value" uib-btn-radio="'available'" ng-change='newValue(value)'>Disponibles</label>
+        <label class="btn btn-primary" ng-model="value" uib-btn-radio="'allB'" ng-change='newValue(value)'>Todos</label>
+    </div>
+        <div class="col-sm-12" id="header_container">
+            <div class="col-md-4 no-padding-left"> 
+                <div class="input-group stylish-input-group" >
+                    <span class="input-group-addon">
+                        <button>
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </span>
+                    <input type="text" class="form-control"  placeholder="Search" ng-model="searchValue" ng-change="findValue()"/>
+                    <span class="input-group-addon" ng-click="cleanSearch()">
+                        <button>
+                            <i class="fa fa-remove"></i>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+       <div class="col-md-4">
+            <div>
+                <ul class="list-group">
+                    <li ng-repeat="book in results" class="list-group-item" ng-click="showDetails(book)">
+                        <span>{{book.nombre}}</span><i class="icon-right fa fa-play"></i>
+                    </li>
+              </ul>
+            </div>
+        </div>
+
+        <div ng-if="showBooksDetail" class="col-md-8">
+            <book-details ng-book="book"></book-details>
+        </div>
+    </div>
+</div>

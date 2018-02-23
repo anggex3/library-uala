@@ -1,0 +1,50 @@
+#header_container{
+	margin-top: 3em;
+	margin-bottom: 1em;
+}
+.stylish-input-group .input-group-addon{
+    background: white; 
+}
+.stylish-input-group .form-control{
+	border-right:0; 
+	box-shadow:0 0 0; 
+	border-color:#ccc;
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+.stylish-input-group input{
+	border-left:0; 
+
+}
+
+.stylish-input-group span{
+	border-bottom-left-radius: 2em;
+    border-top-left-radius: 2em;
+   	border-bottom-right-radius: 2em;
+    border-top-right-radius: 2em;
+}
+
+.list-group-item{
+	padding: 28px 15px;
+	cursor: pointer;
+}
+
+.list-group-item > .icon-right {
+    float: right;
+}
+
+.margin-details{
+	margin-top: 1em;
+}
+.no-padding-left{
+	padding-left: 0px;
+}
+
+
+ @media (max-width: 991px) and (min-width: 760px)  {
+    ul {
+		margin-top: 10em;
+	}
+}
